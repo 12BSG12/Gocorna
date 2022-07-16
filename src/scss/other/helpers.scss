@@ -15,7 +15,7 @@
 
 //Адаптиваное свойство
 $maxWidth: 1920;
-$maxWidthContainer: 1920; //Ширина макета
+$maxWidthContainer: 1152; //Ширина макета
 
 @mixin adaptiv-value($property, $startSize, $minSize, $type) {
     $addSize: $startSize - $minSize;
@@ -38,7 +38,7 @@ $maxWidthContainer: 1920; //Ширина макета
 }
 
 //Адаптивный шрифт
-$maxWth: 1920; //Ширина макета
+$maxWth: 1152; //Ширина макета
 @mixin adaptiv-font($pcSize, $mobSize) {
     $addSize: $pcSize - $mobSize;
     $addMobSize: $addSize + $addSize * 0.7;

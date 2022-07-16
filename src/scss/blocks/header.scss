@@ -1,0 +1,194 @@
+.header {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    left: 0;
+    // .header__inner
+    &__inner {
+        position: relative;
+        display: flex;
+        min-height: 114px;
+        align-items: center;
+        @media (max-width: 760px) {
+            .header__burger{
+                position: absolute;
+                right: 0;
+            }
+        }
+    }
+    // .header__logo
+    &__logo {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        img{
+            margin-right: 5px;
+        }
+    }
+    // .header__logo-text
+    &__logo-text {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 21px;
+        color: #000000;
+        span{
+            color: #EC5863;
+        }
+    }
+    // .header__menu
+    &__menu {
+        flex: 1 1 auto;
+        @media (max-width: 760px) {
+            flex: 0 0 auto;
+        }
+    }
+    // .header__btn
+    &__btn {
+        flex-grow: 0;
+        flex-shrink: 0;
+        @include adaptiv-value(flex-basis, 252, 60, 1);
+        display: flex;
+        justify-content: flex-end;
+        @media (max-width: 760px) {
+            position: absolute;
+            right: 60px;
+        }
+    }
+    &__burger{
+        display: none;
+        position: relative;
+        width: 37px;
+        height: 29px;
+        font-size: 0;
+        z-index: 2;
+        cursor: pointer;
+        span{
+            background-color: #000;
+            position: absolute;
+            width: 100%;
+            top: 13px;
+            height: 3px;
+            transition: all 0.3s ease;
+        }
+        &::before,
+        &::after{
+            content: '';
+            background-color: #000;
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            transition: all 0.3s ease;
+        }   
+        &::before{
+            top: 0;
+        }
+        &::after{
+            bottom: 0;
+        }
+        @media (max-width: 760px) {
+            display: block;
+        }
+    }
+    &__burger.active{
+        &::before{
+            transform: rotate(45deg);
+            width: 100%;
+            top: 13px;
+        }
+        &::after{
+            transform: rotate(-45deg);
+            bottom: 13px;
+        }
+        span{
+            transform: scale(0);
+        }
+    }
+}
+.menu {
+    display: flex;
+    justify-content: flex-end;
+    // .menu__list
+    &__list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @media (max-width: 760px) {
+            flex-direction: column;
+        }
+    }
+    // .menu__list-item
+    &__list-item {
+        margin-right: 40px;
+        &:last-child{
+            margin: 0;
+        }
+        @media (max-width: 760px) {
+            margin-right: 0;
+            margin-bottom: 15px;
+        }
+    }
+    // .menu__list-link
+    &__list-link {
+        text-transform: uppercase;
+        font-family: 'Raleway';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 10px;
+        line-height: 12px;
+        letter-spacing: 0.14em;
+        color: #000000;
+        &:hover{
+            text-decoration: underline;
+        }
+        @media (max-width: 760px) {
+            font-size: 18px;
+        }
+    }
+    @media (max-width: 760px) {
+        position: absolute;
+        top: -200%;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+        transition: all .3s ease;
+        &::before{
+            content: '';
+            position: absolute;
+            width: 100vw;
+            top: -80px;
+            height: 250px;
+            z-index: -1;
+            background-color: #587EEC;
+            border-radius: 0 0 30px 30px;
+            transition: all .10s ease;
+        }
+    }
+}
+.menu.active{
+    top: 80px;
+}
+.btn {
+    display: inline-block;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 10px;
+    line-height: 12px;
+    letter-spacing: 0.14em;
+    color: #FCFDFE;
+    padding: 14px 30px;
+    // .btn_blue
+    &_blue {
+        background: #4285F4;
+        border-radius: 5px;
+        @media (max-width: 460px) {
+            padding: 10px;
+            font-size: 9px;
+        }
+    }
+}

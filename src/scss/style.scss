@@ -1,10 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,800;1,700&display=swap');
 @import '@scss/other/NullStyle';
 @import '@scss/vendor/slick';
 @import '@scss/other/helpers';
 @import '@scss/other/ibg';
 
 body{
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Rubik', sans-serif;
 }
 
 .wrapper{
@@ -23,8 +25,8 @@ body{
 
 .main{
     flex: 1 0 auto;
-    background-color: red;
 }
 
-
 //Blocks
+@import '@scss/blocks/header';
+@import '@scss/blocks/footer';
