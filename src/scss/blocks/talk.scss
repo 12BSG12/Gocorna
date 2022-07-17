@@ -1,0 +1,122 @@
+.talk {
+    padding: 100px 43px 116px 43px;
+    background-color: #FAFBFD;
+    // .talk__inner
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    // .talk__info
+    &__info {
+        position: relative;
+        margin: 0 auto;
+        flex: 0 1 760px;
+        margin-bottom: 80px;
+    }
+    // .talk__decor-big
+    &__decor-big{
+        position: absolute;
+        top: -18px;
+        right: -70px;
+    }
+    // .talk__decor-mid
+    &__decor-mid{
+        position: absolute;
+        top: -45px;
+        left: 250px;
+    }
+    // .talk__decor-small
+    &__decor-small{
+        position: absolute;
+        bottom: -26px;
+        left: -30px;
+    }
+    // .talk__info-row
+    &__info-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 28px 80px;
+        background: #FFFFFF;
+        box-shadow: 0px 2px 24px rgba(88, 126, 236, 0.15);
+        border-radius: 16px;
+        position: relative;
+        z-index: 2;
+    }
+    // .talk__info-item
+    &__info-item {
+        text-align: center;
+    }
+    // .talk__info-num
+    &__info-num {
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 43px;
+        letter-spacing: 0.14em;
+        color: #EC5863;
+    }
+    // .talk__info-text
+    &__info-text {
+        font-weight: 700;
+        font-size: 11px;
+        line-height: 13px;
+        letter-spacing: 0.37em;
+        text-transform: uppercase;
+        color: #000000;
+    }
+    // .talk__body
+    &__body {
+        max-width: 393px;
+    }
+    // .talk__body-title
+    &__body-title {
+        font-weight: 700;
+        font-size: 44px;
+        line-height: 126%;
+        color: #000000;
+        span{
+            color: #587EEC;
+        }
+        margin-bottom: 12px;
+    }
+    // .talk__body-text
+    &__body-text {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 138.5%;
+        letter-spacing: 0.08em;
+        color: #616161;
+        margin-bottom: 24px;
+    }
+    // .talk__video
+    &__video {
+        position: relative;
+        a{
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img{
+                border-radius: 50%;
+                cursor: pointer;
+                &:active{
+                    transition: .3s;
+                    transform: scale(0);
+                }
+            }
+        }
+    }
+    // .talk__video-bg
+    &__video-bg {
+        padding: 24px 94px;
+        background: #FFFFFF;
+        box-shadow: 0px 4px 18px rgba(88, 126, 236, 0.18);
+        border-radius: 8px;
+    }
+}

@@ -27,6 +27,37 @@ body{
     flex: 1 0 auto;
 }
 
+.btn {
+    display: inline-block;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 10px;
+    line-height: 12px;
+    letter-spacing: 0.14em;
+    color: #FCFDFE;
+    padding: 14px 30px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    // .btn_blue
+    &_blue {
+        background: #4285F4;
+        @media (max-width: 460px) {
+            padding: 10px;
+            font-size: 9px;
+        }
+    }
+    // .btn_red
+    &_red {
+        text-align: center;
+        width: 144px;
+        background: #EC5863;
+    }
+}
+
 //Blocks
 @import '@scss/blocks/header';
+@import '@scss/blocks/top';
+@import '@scss/blocks/stay';
+@import '@scss/blocks/talk';
 @import '@scss/blocks/footer';
