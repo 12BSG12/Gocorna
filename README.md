@@ -1,2 +1,1 @@
-# Gocorna
-![](https://12bsg12.github.io/Gocorna/)
+[Gocorna](https://12bsg12.github.io/Gocorna/)
